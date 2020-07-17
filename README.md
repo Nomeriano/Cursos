@@ -1,2 +1,2 @@
 # Cursos
- Alguns cursos 
+ Alguns cursos. Cada arquivo representa um curso diferente.
