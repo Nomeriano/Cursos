@@ -1,0 +1,250 @@
+@charset "UTF-8";
+
+/* --------- Formatação do texto e dp fundo da página ------------ */
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100;0,200;1,100&family=Montserrat&family=Playfair+Display:ital@1&display=swap');
+/*Importa fonte do google*/
+@font-face{ /* Define uma fonte que já tem baixada */
+    font-family: 'FonteLogo';
+    src: url("../_fonts/bubblegum-sans-regular.otf")
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:#dddddd;
+    color: rgba(0, 0, 0, 1);
+}
+
+div#interface{
+    width: 900px;
+    background-color:#ffffff;
+    margin: -20px auto 0px auto;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    padding: 10px;
+}
+
+p{ /* deixar o texto justificado e com indentação */
+    text-align: justify;
+    text-indent: 50px;
+}
+
+img#icone{
+    position: absolute;
+    left: 950px;
+    top: 35px;
+
+}
+
+header#cabecalho {
+    border-bottom: 1px #606060 solid;
+    height: 175px;
+    background: url("../_imagens/glass-logo-peq.jpg") no-repeat 0px 100px;/* .. faz voltar uma pasta*/
+}
+
+header#cabecalho h1{
+    font-family: 'FonteLogo', Helvetica, sans-serif; /* Usa a fonte que foi definida no início */
+    font-size: 30px;
+    color: #606060;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+    padding: 0px;
+    margin-bottom: 0px;
+}
+
+header#cabecalho h2{
+    font-family: 'Epilogue', sans-serif; /* Integração da fonte do Google */
+    color: #888888;
+    padding: 0px;
+    margin-top: 0px;
+}
+
+
+
+
+
+/* ---------------- Formatação Imagem com Legendas ---------------------- */
+figure.foto-legenda{
+    position: relative; /* posição relativa */
+    border: 8px solid white;  /* Borda da imagem */
+    box-shadow: 1px 1px 4px black; /* Colocar bordar, a cor é a sombra */
+    display: inline-block;
+}
+
+figure.foto-legenda img{ /* Chama a classe foto-legenda e img e coloca 100%  */
+    width: 100%;
+    height: 100%;
+}
+
+figure.foto-legenda figcaption{
+    opacity: 0;
+    position: absolute;
+    top: 0px;
+    background-color: rgba(0,0,0,0.4); /* Coloca a cor com uma opacidade no útimo elemento */
+    color: white;
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    box-sizing: border-box;
+    transition: opacity 1s; /* Faz a transação da opacidade demorar 1 segundo */
+}
+
+figure.foto-legenda:hover figcaption{ /* Faz aparecer a letra ao passar o mouse */
+    opacity: 1;
+}
+
+/* ------------------- Formatação do Menu ------------------------ */
+nav#menu{
+    display: block;
+}
+
+nav#menu ul{
+    list-style: none; /* Tira as bolinhas da lista */
+    text-transform: uppercase; /* Deixa todas as letras maiúscula */
+    position: absolute; /* A posição absoluta é em relação a todo o SITE a relativa apenas ao bloco*/
+    top: -20px;
+    left: 500px;
+}
+
+nav#menu li{
+    display: inline-block; /* Deixa alinhado os itns do menu */
+    background-color: #dddddd;
+    padding: 10px; /* Deixa as bordas maior */
+    margin: 2px; /* Dá um espaço entre o itens*/
+    transition: 1s;
+}
+
+nav#menu li:hover{ /* Escurece o botão ao passar o mouse */
+    background-color: #606060
+}
+
+nav#menu h1{
+    display: none;
+}
+
+nav#menu a{  
+    color: black; /* Muda a cor do link */
+    text-decoration: none; /* tira o sublinhado */
+}
+
+nav#menu a:hover{
+    color: #ffffff;
+    text-decoration: underline; /* Deixa sublinhado o texto ao passar o mouse */
+}
+
+section#corpo{
+    display: block;
+    width: 500px;
+    float: left;
+    border-right: 1px solid #606060;
+    padding-right: 15px;
+}
+
+article#noticia-principal h2{
+    font-size: 12pt;
+    color: #606060;
+    background-color: #dddddd;
+    padding: 5px 0px 5px 15px;
+    margin: 10px 0px 10px 0px;
+}
+
+header#cabecalho-artigo h1{
+    font-family: 'FonteLogo';
+    font-size: 20pt;
+    color: #606060;
+    margin-bottom: 0px;
+}
+
+header#cabecalho-artigo h2{
+    font-size: 13pt;
+    color: #606060;
+    background-color: white;
+}
+
+header#cabecalho-artigo h3{
+    font-size: 12pt;
+    color: #606060;
+
+}
+
+.direita{
+    text-align: right;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+table#tabelaspec{
+    border: 1px solid #606060;
+    border-spacing: 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table#tabelaspec td{
+    border: 1px solid #606060;
+    padding: 10px;
+}
+
+table#tabelaspec td.ce{
+    color: white;
+    background-color: #606060;
+    vertical-align: top;
+    font-weight: bold;
+}
+
+table#tabelaspec td.cd{
+    background-color: #cecece;
+    text-align: center;
+}
+
+table#tabelespec{
+    color: #888888;
+    font-size: 13pt;
+    font-weight: bolde;
+}
+
+table#tabelaspec caption span{
+    float: right;
+    color: #000000;
+    display: block;
+    font-size: 8pt;
+    margin-top: 8px;
+}
+
+aside#lateral{
+    display: block;
+    width: 355px;
+    float: right;
+    background-color: #dddddd;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+    padding: 12px;
+    margin-top: 10px;
+
+}
+
+aside#lateral h1{
+    font-family: 'FonteLogo', sans-serif;
+    color: white;
+    font-size: 20pt;
+    background-color: #606060;
+    margin-top: 0px;
+}
+
+aside#lateral h2{
+     
+}
+
+footer#rodape{
+    clear: both;
+    border-top: 1px solid #606060;
+}
+
+footer p{
+    text-align: center;
+}
+
+
+/**/
